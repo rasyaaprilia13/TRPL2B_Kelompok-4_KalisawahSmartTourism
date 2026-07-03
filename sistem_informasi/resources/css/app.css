@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --font-script: 'Pacifico', cursive;
+
+    --color-primary: #0066CC;
+    --color-secondary: #FFC236;
+    --color-hover-primary: #005BB5;
+    --color-soft-blue: #EAF2FF;
+    --color-dark-navy: #1A2B4A;
+    --color-light-gray: #F5F5F5;
+}
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+    }
+}
+
+.font-script {
+    font-family: 'Pacifico', cursive;
+}
+

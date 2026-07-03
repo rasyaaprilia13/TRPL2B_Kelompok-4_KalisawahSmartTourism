@@ -1,0 +1,366 @@
+/* ================= ROOT BRAND ================= */
+:root {
+  --primary: #0066CC;
+  --primary-hover: #005BB5;
+  --secondary: #FFC236;
+  --soft-blue: #EAF2FF;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 80px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar h2 {
+  color: var(--primary);
+}
+
+/* HANYA NAVBAR UTAMA */
+
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  left: 0;
+
+  background: #fff;
+  border-radius: 12px;
+  width: 240px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s;
+
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  padding: 12px 15px;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/* ACTIVE ITEM (kayak di gambar kamu) */
+.dropdown-menu li:first-child a {
+  background: #0066CC;
+  color: #fff;
+}
+/* ================= HERO ================= */
+.hero {
+  height: 550px;
+  background: url('hero.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+/* ================= BUTTON ================= */
+.btn-primary {
+  background: var(--secondary);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #e6ad2e;
+}
+
+/* ================= TRUST SIGNAL ================= */
+.trust {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 60px 80px;
+  background: #fff;
+}
+
+.trust-item {
+  text-align: center;
+}
+
+.trust-item h2 {
+  color: var(--primary);
+  font-size: 30px;
+}
+
+/* ================= SECTION UMUM ================= */
+.section {
+  padding: 70px 80px;
+  text-align: center;
+}
+
+.section h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+/* ================= CARD PAKET ================= */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #666;
+}
+
+.card button {
+  background: #FFC236;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* ================= LOGO CLIENT ================= */
+.logo-client {
+  padding: 50px 80px;
+  background: #fff;
+  text-align: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* ================= BLOG ================= */
+.blog-card {
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.blog-card img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.blog-content h3 {
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ================= TESTIMONI ================= */
+.testimoni {
+  background: var(--soft-blue);
+  padding: 70px 80px;
+  text-align: center;
+}
+
+.testimoni h2 {
+  color: var(--primary);
+}
+
+/* ================= LOKASI ================= */
+.lokasi {
+  padding: 70px 80px;
+  text-align: center;
+}
+
+/* ================= CTA ================= */
+.cta {
+  background: url('cta.jpg') center/cover no-repeat;
+  padding: 80px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.cta {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.cta h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.cta h2, .cta a {
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--primary);
+  color: white;
+  padding: 60px 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.footer h3 {
+  margin-bottom: 15px;
+}
+
+.footer a, .footer p {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .trust {
+  background: #fff;
+  border-radius: 20px;
+  margin: -40px auto 0;
+  width: 80%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.trust div h2 {
+  font-size: 28px;
+  color: #0066CC;
+}
+
+  .footer {
+  background: #0066CC;
+  color: white;
+  padding: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.footer h3 {
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+}

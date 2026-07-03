@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 420px;
+  margin: auto;
+  background: #f4f6f8;
+  padding: 0 10px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  background: url('/images/hero.jpg') center/cover no-repeat;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+  border-radius: 0 0 18px 18px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 300px;
+}
+
+.hero h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ================= SECTION ================= */
+.section {
+  padding: 20px 0;
+  background: #c1c2c4;
+}
+
+/* ================= TEXT ================= */
+h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 13px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.img-box {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+}
+
+.package {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  margin: 0 20px 20px; /* 🔥 INI KUNCI */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.package-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 0 10px 5px;
+}
+
+/* INNER CARD */
+.package-inner {
+  background: #fff;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FLEX */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.col {
+  width: 50%;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* LIST */
+ul {
+  padding-left: 14px;
+  margin-top: 5px;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+/* NOTE */
+.note {
+  color: red;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+/* BOTTOM */
+.bottom {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* PRICE */
+.price {
+  color: #1e73ff;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+/* BUTTON */
+.btn {
+  background: #ffd400;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 18px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  margin-top: 20px;
+  background: #4da3c7;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 10px;
+}
